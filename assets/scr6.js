@@ -35,10 +35,13 @@ var cnUtil = (function() {
     //keys.privateKey = cnBase58.encode(privateKeyBase + checksum);
 	
 	// This is Bytecoin GUI style Keys
-	keys.privateKey = keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec;
+	//keys.privateKey = keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec;
+        //This is EGN simplewallet restore format
+	keys.privateKey = keys.spend.sec; //Private Spend Key
 	
 
-	var trackingKeyBase = keys.spend.pub + keys.view.pub + '0000000000000000000000000000000000000000000000000000000000000000' + keys.view.sec; // Karbowanec Tracking Key
+	//var trackingKeyBase = keys.spend.pub + keys.view.pub + '0000000000000000000000000000000000000000000000000000000000000000' + keys.view.sec; // Private View Key
+	var trackingKeyBase =  keys.view.sec; // Private View Key
 	
 	// var trackchecksum = this.cn_fast_hash(trackingKeyBase).slice(0, addressChecksumSize * 2);
     // keys.trackingKey = cnBase58.encode(trackingKeyBase + trackchecksum);	

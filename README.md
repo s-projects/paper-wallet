@@ -1,2 +1,2 @@
 # paper-wallet
-Demo: http://www.bytecoins.ga/
+Demo: http://seed6.egano.net/paper

@@ -1,22 +1,22 @@
-<?php ?>
-
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title>Bytecoin [BCN] Paper Wallet Generator</title>
-  <meta name="keywords" content="Bytecoin, BCN, paper wallet, generator, paperwallet">
-  <meta name="description" content="Generate recoverable Bytecoin [BCN] paper wallet encrypted with long password phrase">
+  <title>Egano [EGN] Paper Wallet Generator</title>
+  <meta name="keywords" content="Egano, EGN, paper wallet, generator, paperwallet">
+  <meta name="description" content="Generate recoverable Egano [EGN] paper wallet encrypted with long password phrase">
 <link rel="stylesheet" type="text/css" href="./assets/style.css"  />
 
 
 
   
 	
-	<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAApdJREFUeNrUVz1PG0EQHSxaO/Q2khskDEWoMFS5lgKB+BAFRfIL4khIpCASbpFAtokURdBQEAkEWKlJc1TgVKFxChoXdk/sH2BmrFtyOzdr7gsnjDQ6nb138/bNm525oW63C//ahv0uHMtms3hZdHwK/ZWw7Ar9O/ldo9Hw++6hp5jA4BSwiL4QcIMEqIhg7EggEEAZL4WIbFccMPeBQGDwEbzQDl7HlPZbdMsEJDEAAOC8y3be/TQTuPCXBCCVSkFuYsIYpd1uw+96PRQjw4IGRAYIwPHJia9t/6zVYL9UgtrNjcQIifyDmA6nBAtxcD+dz/cAL62sSH8XMJZlYqIYJFCr1YJWs6mlazyX09bs7O722HCvc8WyNBAOC2+DgKiencF+uaz9ls5k4OvhoQZmGdng69DeUEx1oCkmFvmqO/8H3l92cMekhS8HBxpDBnun2FeasJ6rL9TNFWNxTViSwnmJ8pxzy8/MwM7e3uN9p9ORKuQxJRyEpxmtr615ArhLND87C+9JB6OjkEEtkB7S6bT2zMeNDUmU4buoVIbk/WxrexuaCMJ0iFGpUoNLRMk3lSmlTTk3Yubb6WmPxVBM8Af5kf0Zy04ovd5zn5ABpZ9kMglLq6uiNlSbVyD+cF34PaK5UbBN1AIxQACkDZm6qB1nWZIG6DBzp4WEKww9WjpsPjmFKVEtfZOTnoOMmc1B0FxYClKipk5LvowacFdO9eJCWn7kmSewXI769Q8/ICSjA2t+bo4zcYWitKTJqggxG6WUGDV0UW+JUkdDNipRZwra+Y/LS6hdX0P1/FwcfPkEHtt4p8ozzHgngXiOQbfvxJ0QTrF7p6veDgKACEIBQZ9yPlyiWqUfgJfxGfjffBAPwh4EGAAnxDiRUAEEvwAAAABJRU5ErkJggg==" rel='shortcut icon' type='image/x-icon' />
 	
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/icon" href="favicon.ico" >
+ 
   
   
 </head>
@@ -34,7 +34,7 @@ document.getElementById("demo").innerHTML = str.slice(6, 8);</script>
     <div class="jumbotron" style="text-align: center; margin: 0px auto 10px auto; padding: 5px 0;">
 	
       <h1 style="font-size: 40px">Paper Wallet Generator</h1>
-      <p>Generate Bytecoin paperwallet with unique passphrase.</p>
+      <p>Generate Egano paperwallet with unique passphrase.</p>
 	  
     </div>
 
@@ -86,7 +86,6 @@ document.getElementById("demo").innerHTML = str.slice(6, 8);</script>
             </div>
 
           </form>
-
         </div>
 
         <div role="tabpanel" class="tab-pane fade" id="restore">
@@ -171,7 +170,7 @@ document.getElementById("demo").innerHTML = str.slice(6, 8);</script>
                 <div class="resulting panel-body" id="resulting_view_key" style="word-wrap: break-word;"></div>
               </div>
 			  
-			  <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span> Import into Bytecoin Wallet to track incoming transactions. Seeing outgoing transactions and spending funds is NOT awailable.</p>
+			  <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span> Import into Egano simplewallet as private view key. <strong>Required for wallet restore.</strong> This key along with wallet address allows tracking incoming transactions. Seeing outgoing transactions and spending funds is NOT awailable.</p>
 			  
             </div>			
           <!--/div-->
@@ -199,12 +198,12 @@ document.getElementById("demo").innerHTML = str.slice(6, 8);</script>
                 <div class="resulting panel-body" id="resulting_private_key" style="word-wrap: break-word;"></div>
               </div>
 		  
-			  <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span> You can import it into Bytecoin Wallet. <strong>Keep it secret!</strong></p>
+			  <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span>Import into Egano simplewallet as private spend key. Required for wallet restore. <strong>Keep it secret!</strong></p>
 
 			</div>
 
           </div>
-          <h2 style="text-align: center;" class="print-hide text-danger">Please save this data for future use!</h2>
+          <h2 style="text-align: center;" class="print-hide text-danger">Please save and print this data for future use before leaving this page if you just generated new wallet.</h2>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

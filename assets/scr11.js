@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
 
   var passphraseGenerateModal = $('#passphraseGenerateModal');
   var showResultsModal = $('#showResultsModal');
@@ -37,7 +37,7 @@ $(function() {
     var wallet = BW.generateWallet(BW.getStringWords(passPhrase));
     var address = wallet.address;
     var privateKey = wallet.privateKey;
-	var viewKey = wallet.trackingKey; // karbo tracking key
+	var viewKey = wallet.trackingKey; // view key
     $("#qrcode_address").empty();
     $("#qrcode_private_key").empty();
     $("#qrcode_pass_phrase").empty();
@@ -65,14 +65,14 @@ $(function() {
     var passphrase_length = $('#passphrase').val().split(' ').length;
     var PASSPHRASE_SECURE_LENGTH = 18;
     var percentage = Math.floor(100 * Math.min(passphrase_length, PASSPHRASE_SECURE_LENGTH) / PASSPHRASE_SECURE_LENGTH);
-    var text_message = 'very weak (less than 10 words)';
+    var text_message = 'too weak (less than 10 words)';
     var progressbar_class = 'progress-bar-danger';
     var input_class = 'has-error';
     var feedback_class = 'glyphicon-remove';
     $('#createWallet').addClass('disabled');
 	$('#createWallet').prop('disabled', true);
     if(percentage >= 100) {
-      text_message = 'добре (18 слів і більше)';
+      text_message = 'good (at least 18 words)';
       progressbar_class = 'progress-bar-success';
       input_class = 'has-success';
       feedback_class = 'glyphicon-ok-circle';
@@ -81,7 +81,7 @@ $(function() {
     }
     else {
       if(percentage > 50) {
-        text_message = 'слабка (менш ніж 18 слів)';
+        text_message = 'weak (less than 18 words)';
         progressbar_class = 'progress-bar-warning';
         input_class = 'has-warning';
         feedback_class = 'glyphicon-warning-sign';
